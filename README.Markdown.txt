@@ -1,0 +1,1 @@
+ruebee is a set of C# extention methods to extend .NET classes with applicable ruby methods 
