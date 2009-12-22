@@ -80,6 +80,14 @@ namespace Ruebee.Specs
         }
 
         [Test]
+        public void can_rjust()
+        {
+            "hello".RJust(4).ShouldEqual("hello");
+            "hello".RJust(20).ShouldEqual("               hello");
+            "hello".RJust(20, "1234").ShouldEqual("123412341234123hello");
+        }
+
+        [Test]
         public void can_iterate_over_chars_multiple_times()
         {
             "abc".Loop(5).ShouldEqual("abcab");

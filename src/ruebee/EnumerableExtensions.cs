@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace ruebee
 {
@@ -9,6 +10,12 @@ namespace ruebee
         {
             foreach (var item in collection)            
                 action(item);            
+        }
+
+        [Obsolete("Use Linq.Distinct")]
+        public static IEnumerable<T> Uniq<T>(this IEnumerable<T> value)
+        {
+            return value.Distinct();
         }
     }
 }

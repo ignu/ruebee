@@ -76,6 +76,18 @@ namespace ruebee
             return LJust(value, paddingAmount, " ");
         }
 
+        public static string RJust(this string value, int paddingAmount, string paddingString)
+        {
+            var extraPadding = paddingAmount - value.Length;
+            if (extraPadding < 1) return value;
+            return paddingString.Loop(extraPadding) + value;
+        }
+
+        public static string RJust(this string value, int paddingAmount)
+        {
+            return RJust(value, paddingAmount, " ");
+        }
+
         public static string Loop(this string value, int chars)
         {
             var builder = new StringBuilder();
