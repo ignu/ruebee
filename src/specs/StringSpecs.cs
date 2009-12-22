@@ -70,5 +70,19 @@ namespace Ruebee.Specs
                 .EachLine(l => builder.Append(l));
             builder.ToString().ShouldEndWith("Hello there.How are you?");
         }
+
+        [Test]
+        public void can_ljust()
+        {
+            "hello".LJust(4).ShouldEqual("hello");
+            "hello".LJust(20).ShouldEqual("hello               ");
+            "hello".LJust(20, "1234").ShouldEqual("hello123412341234123");   
+        }
+
+        [Test]
+        public void can_iterate_over_chars_multiple_times()
+        {
+            "abc".Loop(5).ShouldEqual("abcab");
+        }
     }
 }
