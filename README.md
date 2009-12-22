@@ -4,7 +4,7 @@ ruebee is a set of C# extention methods to extend .NET classes with applicable r
 
 ##Examples
 
-###Strings
+###Integers
 	
 		public void can_do_something_up_to_n_times()
 		{
@@ -19,9 +19,9 @@ ruebee is a set of C# extention methods to extend .NET classes with applicable r
 		    19.Gcd(36).ShouldEqual(1);
 		}
 
-[More Integer Specs](http://github.com/ignu/ruebee/blob/master/src/specs/IntegerSpecs.cs)
+[More Integer Specs...](http://github.com/ignu/ruebee/blob/master/src/specs/IntegerSpecs.cs)
 
-###Integers
+###Strings
 
         [Test]
         public void can_capitalize()
@@ -64,4 +64,4 @@ ruebee is a set of C# extention methods to extend .NET classes with applicable r
             "hello".LJust(20, "1234").ShouldEqual("hello123412341234123");   
         }
 	
-[More String Specs](http://github.com/ignu/ruebee/blob/master/src/specs/StringSpecs.cs)
+[More String Specs...](http://github.com/ignu/ruebee/blob/master/src/specs/StringSpecs.cs)
