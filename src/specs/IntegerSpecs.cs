@@ -45,5 +45,11 @@ namespace Ruebee.Specs
             6.Lcm(9).ShouldEqual(18);
             6.Lcm(6).ShouldEqual(6);
         }
+
+        [Test]
+        public void can_get_char()
+        {
+            65.Chr().ShouldEqual('A');
+        }
     }
 }

@@ -46,5 +46,10 @@ namespace ruebee
             }
             return rv;     
         }
+
+        public static char Chr(this int value)
+        {
+            return Convert.ToChar(value);
+        }
     }
 }

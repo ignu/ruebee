@@ -22,14 +22,12 @@ ruebee is a set of C# extention methods to extend .NET classes with applicable r
 [More Integer Specs...](http://github.com/ignu/ruebee/blob/master/src/specs/IntegerSpecs.cs)
 
 ###Strings
-
-        [Test]
+        
         public void can_capitalize()
         {
             "hello".Capitalize().ShouldEqual("Hello");
         }
 
-        [Test]
         public void can_center()
         {
             "hello".Center(4).ShouldEqual("hello");
@@ -39,7 +37,6 @@ ruebee is a set of C# extention methods to extend .NET classes with applicable r
             "hello".Center(9, '-').ShouldEqual("--hello--");
         }
 
-        [Test]
         public void can_chomp()
         {
             "hello".Chomp().ShouldEqual("hello");
@@ -47,7 +44,6 @@ ruebee is a set of C# extention methods to extend .NET classes with applicable r
             "hello \r\n".Chomp().ShouldEqual("hello");            
         }
 
-        [Test]
         public void can_perform_action_on_each_line()
         {
             var builder = new StringBuilder();
@@ -56,7 +52,6 @@ ruebee is a set of C# extention methods to extend .NET classes with applicable r
             builder.ToString().ShouldEndWith("Hello there.How are you?");
         }
 
-        [Test]
         public void can_ljust()
         {
             "hello".LJust(4).ShouldEqual("hello");
