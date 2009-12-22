@@ -1,4 +1,6 @@
-﻿using System.Linq;
+﻿using System;
+using System.Linq;
+using System.Text;
 using NUnit.Framework;
 using ruebee;
 
@@ -50,6 +52,23 @@ namespace Ruebee.Specs
         {
             "hello".Chop().ShouldEqual("hell");
             "hello".Chop().Chop().ShouldEqual("hel");
+        }
+
+        [Test]
+        public void can_get_lines()
+        {
+            var lines = ("Hello there." + Environment.NewLine + "How are you?").Lines();
+            lines.Each(Console.WriteLine);            
+            lines.First().ShouldEqual("Hello there.");
+        }
+
+        [Test]
+        public void can_perform_action_on_each_line()
+        {
+            var builder = new StringBuilder();
+            ("Hello there." + Environment.NewLine + "How are you?")
+                .EachLine(l => builder.Append(l));
+            builder.ToString().ShouldEndWith("Hello there.How are you?");
         }
     }
 }

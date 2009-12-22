@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 
@@ -49,6 +50,17 @@ namespace ruebee
         public static string Chop(this string value)
         {
             return value.Substring(0, value.Length - 1);
+        }
+
+        public static IEnumerable<String> Lines(this string value)
+        {
+            return value.Split(new[] { Environment.NewLine }, StringSplitOptions.None);
+        }
+
+        public static void EachLine(this string value, Action<string> action)
+        {
+            value.Split(new[] { Environment.NewLine }, StringSplitOptions.None)
+                .Each(action);
         }
     }
 }
